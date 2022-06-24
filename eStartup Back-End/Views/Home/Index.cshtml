@@ -1,0 +1,95 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="image text-center">
+                    <h1 style="color: #71c55d;">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "MainTitle").Value</h1>
+                    <p style="color: gray;">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "SubTitle").Value</p>
+                    <img src="/assets/Image/hero-img.png" alt="">
+                    <a class="btn mt-4 but">Get Started</a>
+                    <div class="app">
+                        <ul class="d-flex text-center justify-content-center">
+                            <li>APP STORE</li>
+                            <li>GOOGLE PLAY</li>
+                            <li>WINDOWS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="card-section" class="">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "LatestSection").Value</h2>
+                <span class="text-center">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "LatestSubTitle").Value</span>
+                @foreach (Card card in Model.Cards)
+                {
+                    <div class="cards col-lg-4 mt-3">
+                        <div class="include">
+                            <img src="/assets/Image/Cards/@card.Image" alt="">
+                            <p>@card.Description</p>
+                            <div class="button d-flex justify-content-between">
+                                <span>@card.Data</span>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="email-section" style="background-image: url(assets/Image/Email/newsletter-bg.jpg);">
+        <div class="email d-flex align-items-center">
+            <div class="message d-flex ">
+                <form action="">
+                    <input type="text" placeholder="Email">
+                </form>
+                <button type="submit" class="btn email-btn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="address col-lg-4">
+                    <div class="container d-flex py-2 mt-4">
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "LocationIcon").Value"></i>
+                        <p class="ms-3">
+                            @layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Address").Value
+                        </p>
+                    </div>
+                    <div class="container d-flex py-2">
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "EnvelopeIcon").Value"></i>
+                        <p class="ms-3">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Email").Value</p>
+                    </div>
+                    <div class="container d-flex py-2">
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "PhoneIcon").Value"></i>
+                        <p class="ms-3">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Phone").Value</p>
+                    </div>
+                    <div class="media">
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Twitter").Value medias"></i>
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Facebook").Value medias"></i>
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Instagram").Value medias"></i>
+                        <i class="@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "Invision").Value medias"></i>
+                    </div>
+                </div>
+                <div class="contact col-lg-8">
+                    <form action="">
+                        <input type="text" placeholder="Your Name"><br>
+                        <input type="text" placeholder="Your Email"><br>
+                        <input type="text" placeholder="Subject"><br>
+                        <textarea name="" id="" cols="30" rows="6" placeholder="Message"></textarea>
+                    </form>
+                    <a href="" class="btn btn-danger">Send Message</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

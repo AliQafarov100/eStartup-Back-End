@@ -1,0 +1,265 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  background-color: white;
+}
+
+.navbar .row {
+  height: 70px;
+}
+
+.navbar .navlink ul li {
+  list-style: none;
+  font-size: 15px;
+}
+
+.navbar .navlink ul li a {
+  text-decoration: none;
+  color: black;
+  transition: .5s;
+}
+
+.navbar .navlink ul li a:hover {
+  color: #71c55d;
+}
+
+#main-page {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 999;
+}
+
+#main-page .image img {
+  width: 100%;
+  height: 250px;
+}
+
+#main-page .image .but {
+  border-radius: 20px;
+  border: 1px solid #71c55d;
+  color: #71c55d;
+  transition: .5s;
+}
+
+#main-page .image .but:hover {
+  background-color: #71c55d;
+  color: white;
+}
+
+#main-page .image .app {
+  margin: 0px auto;
+}
+
+#main-page .image .app ul {
+  padding-left: 0px;
+}
+
+#main-page .image .app li {
+  margin: 5px;
+  list-style: none;
+}
+
+#email-section {
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#email-section .email {
+  background: linear-gradient(rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.2) 95%);
+}
+
+#email-section button {
+  background-color: #71c55d;
+}
+
+#card-section .cards .include img {
+  width: 100%;
+}
+
+#card-section .cards .include .button a {
+  text-decoration: none;
+  color: black;
+  transition: .5s;
+}
+
+#card-section .cards .include .button a:hover {
+  color: #71c55d;
+}
+
+#contact-fluid .address .container i {
+  color: #71c55d;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-toggler {
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+  }
+  .but {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navlink {
+    display: none;
+  }
+  .but {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    width: 50%;
+    margin: 10% auto;
+  }
+  .image .app {
+    width: 50%;
+  }
+  .image .app li {
+    font-size: 10px;
+  }
+  #card-section h2 {
+    font-weight: 100;
+    font-size: 50px;
+  }
+  #card-section p {
+    font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
+  }
+  #card-section p:hover {
+    color: #71c55d;
+  }
+  #email-section {
+    background-size: 100%;
+    background-position: center;
+  }
+  #email-section .email {
+    width: 100%;
+    height: 250px;
+  }
+  #email-section .email .message {
+    width: 50%;
+    margin: 0px auto;
+  }
+  #email-section .email .message form {
+    width: 50%;
+  }
+  #email-section .email .message form input {
+    width: 100%;
+    height: 50px;
+  }
+  #email-section .email .message button {
+    width: 200px;
+    height: 50px;
+  }
+  #contact-fluid .address .container i {
+    font-size: 20px;
+  }
+  #contact-fluid .address .container p {
+    font-size: 15px;
+  }
+  #contact-fluid .contact input {
+    width: 70%;
+    height: 40px;
+    margin-top: 25px;
+  }
+  #contact-fluid .contact textarea {
+    width: 70%;
+    margin-top: 25px;
+  }
+  #contact-fluid .media i {
+    width: 45px;
+    height: 45px;
+    background-color: #71c55d;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #2a2c30;
+}
+
+footer ul {
+  padding-left: 0px;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .endl a {
+  color: #71c55d;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    width: 100%;
+    margin: 25% auto;
+  }
+  .image img {
+    width: 100%;
+    height: 250px;
+  }
+  .image .but {
+    border-radius: 20px;
+    border: 1px solid #71c55d;
+    color: #71c55d;
+    transition: .5s;
+  }
+  .image .but:hover {
+    background-color: #71c55d;
+    color: white;
+  }
+  .image .app {
+    width: 100%;
+  }
+  .image .app li {
+    font-size: 7px;
+  }
+  .image h2 {
+    font-size: 10px;
+  }
+  #email-section .email {
+    height: 250px;
+    flex-wrap: wrap;
+  }
+  #email-section .email input {
+    display: inline-block;
+    height: 50px;
+  }
+  #email-section .email .email-btn {
+    width: 100%;
+  }
+  .contact input {
+    width: 100%;
+    height: 40px;
+    margin-top: 25px;
+  }
+  .contact textarea {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
